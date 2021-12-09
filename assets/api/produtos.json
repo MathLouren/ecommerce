@@ -1,0 +1,26 @@
+[
+    {
+        "id":"tenis",
+        "nome":"Tenis",
+        "preco":"399",
+        "img":"../images/image-product-1-thumbnail.jpg"
+    },
+    {
+        "id":"tenis",
+        "nome":"Tenis",
+        "preco":"199",
+        "img":"../images/image-product-2.jpg"
+    },
+    {
+        "id":"tenis",
+        "nome":"Tenis",
+        "preco":"599",
+        "img":"../images/image-product-3.jpg"
+    },
+    {
+        "id":"tenis",
+        "nome":"Tenis",
+        "preco":"599",
+        "img":"../images/image-product-4.jpg"
+    }
+]
