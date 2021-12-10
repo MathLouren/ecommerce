@@ -1,0 +1,20 @@
+{
+    "id":"tenis",
+    "nome":"Tenis",
+    "preco":"299",
+    "descricao":"Versátil e ultra confortável, treinos leves de corrida e uso diário.",
+    "estoque":3,
+    "img":"../images/image-product-4-thumbnail.jpg",
+    "avaliacoes":[
+        {
+            "nome":"Junior",
+            "estrelas":"4",
+            "descricao":"Ótimo produto"
+        },
+        {
+            "nome":"Ana carolina",
+            "estrelas":"5",
+            "descricao":"Demorou um pouco para chegar, mais o produto é bom"
+        }
+    ]
+}
