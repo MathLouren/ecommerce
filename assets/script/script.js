@@ -3,6 +3,7 @@ const vm = new Vue({
     data:{
         produtos:[],
         produto:false,
+        carrinhoTotal:0
     },
     filters:{
         numeroPreco(valor){
@@ -19,8 +20,18 @@ const vm = new Vue({
             fetch(`http://127.0.0.1:5500/assets/api/produtos/${id}/dados.json`).then((r)=>{
                return r.json()
             }).then((r)=>{
-                console.log(r)
+              this.produto = r;
             })
+        },
+        abrirModal(id){
+            this.puxarProdutos(id)
+            window.scrollTo({
+                top:0,
+                behavior:"smooth"
+            })
+        },
+        fecharModal({target, currentTarget}){
+            if(target === currentTarget) this.produto = false
         }
     },
     created(){

@@ -10,11 +10,15 @@
   </head>
   <body>
     <div id="app">
-      <section class="modal">
-        {{produto}}
-      </section>
+      <header class="header">
+        <img src="assets/images/logo.svg" alt="logo" class="logo">
+        <div class="carrinho_menu">
+          {{carrinhoTotal}} |
+        </div>
+      </header>
+
       <section class="produtos">
-        <div v-for="produto in produtos" @click="puxarProdutos(produto.id)" class="produto">
+        <div v-for="produto in produtos" class="produto">
           <img
             :src="produto.img"
             :alt="produto.nome"
@@ -28,7 +32,22 @@
             </div>
               <span class="produto_descricao">{{produto.descricao}}</span>
           </div>
-          <div class="btn_checkout">Comprar</div>
+          <div class="btn_checkout" @click="abrirModal(produto.id)">Comprar</div>
+        </div>
+      </section>
+
+      <section class="modal" v-if="produto" @click="fecharModal">
+        <div class="modal_container">
+          <div class="modal_img">
+            <img :src="produto.img" :alt="produto.nome">
+          </div>
+          <div class="modal_dados">
+            <button class="modal_fechar" @click="produto = false">X</button>
+            <span class="modal_titulo">{{produto.nome}}</span>
+            <span class="modal_descricao">{{produto.descricao}}</span>
+            <span class="modal_preco">{{+produto.preco | numeroPreco}}</span>
+            <button class="adicionar_cart">Adicionar Item</button>
+          </div>
         </div>
       </section>
     </div>

@@ -2,9 +2,9 @@
     "id":"tenis_3",
     "nome":"Tênis Galax",
     "preco":"599",
-    "descricao":"Versátil e ultra confortável, treinos leves de corrida e uso diário.",
+    "descricao":"Versátil e ultra confortável, treinos leves de corrida e uso diário",
     "estoque":7,
-    "img":"../images/image-product-3-thumbnail.jpg",
+    "img":"./assets/images/image-product-3.jpg",
     "avaliacoes":[
         {
             "nome":"Fábio",
