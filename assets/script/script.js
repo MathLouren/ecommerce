@@ -66,14 +66,26 @@ const vm = new Vue({
             setTimeout(()=>{
                 this.alertaAtivo = false
             },1000)
+        },
+        router(){
+            const hash = document.location.hash;
+            if(hash){
+                this.puxarProdutos(hash.replace("#",""))
+            }
         }
     },
     watch:{
+        produto(){
+            document.title = this.produto.nome || "Sneakers";
+            const hash = this.produto.id || "";
+            history.pushState(null, null, `#${hash}`);
+        },
         carrinho(){
             window.localStorage.carrinho = JSON.stringify(this.carrinho)
         }
     },
     created(){
+        this.router();
         this.fetchProdutos();
         this.checarLocalStorage();
     }
