@@ -13,8 +13,14 @@
       <header class="header">
         <img src="assets/images/logo.svg" alt="logo" class="logo">
         <div class="carrinho_menu">
-          {{carrinhoTotal}} |
+          {{carrinhoTotal | numeroPreco}} | {{carrinho.length}}
         </div>
+        <ul>
+          <li v-for="(item, index) in carrinho">
+            <p>{{item.nome}}</p>
+            <button @click="removerItem(index)">X</button>
+          </li>
+        </ul>
       </header>
 
       <section class="produtos">
@@ -46,7 +52,9 @@
             <span class="modal_titulo">{{produto.nome}}</span>
             <span class="modal_descricao">{{produto.descricao}}</span>
             <span class="modal_preco">{{+produto.preco | numeroPreco}}</span>
-            <button class="adicionar_cart">Adicionar Item</button>
+            {{produto.estoque}}
+            <button class="adicionar_cart" @click="adicionarItem()" v-if="produto.estoque > 0">Adicionar Item</button>
+            <button class="adicionar_cart esgotado" @click="adicionarItem()" v-else disabled>Sem estoque</button>
           </div>
         </div>
       </section>

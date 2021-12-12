@@ -36,9 +36,21 @@ body {
 .carrinho_menu::after {
   content: "";
   display: inline-block;
-  background: url("./assets/images/shopping-cart.svg") no-repeat center center;
+  background: url("../images/shopping-cart.svg") no-repeat center center;
   width: 25px;
   height: 25px;
+  margin-left: 10px;
+}
+
+.carrinho_menu {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.esgotado {
+  background: #808080 !important;
+  font-weight: bold;
 }
 
 /* LISTA PRODUTOS */
