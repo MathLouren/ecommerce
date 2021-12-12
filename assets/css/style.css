@@ -139,11 +139,11 @@ body {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translate3D(50px, 0, 0);
+    transform: translate3d(50px, 0, 0);
   }
   to {
     opacity: 1;
-    transform: translate3D(0px, 0, 0);
+    transform: translate3d(0px, 0, 0);
   }
 }
 
@@ -212,4 +212,42 @@ body {
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 0 3rem rgba(0, 0, 0, 0.9);
+}
+
+/* mensagem alerta */
+
+.alerta {
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  z-index: 10;
+  text-align: center;
+  display: none;
+}
+.alerta.ativo {
+  display: block;
+  animation: faedInDown 0.5s forwards;
+}
+
+@keyframes faedInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0px, 0);
+  }
+}
+
+.alerta_mensagem {
+  background-color: #fff;
+  color: #000;
+  display: inline-block;
+  padding: 20px 40px;
+  border: 2px solid #000;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.3);
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
 }

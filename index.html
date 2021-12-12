@@ -52,14 +52,13 @@
             <span class="modal_titulo">{{produto.nome}}</span>
             <span class="modal_descricao">{{produto.descricao}}</span>
             <span class="modal_preco">{{+produto.preco | numeroPreco}}</span>
-            {{produto.estoque}}
             <button class="adicionar_cart" @click="adicionarItem()" v-if="produto.estoque > 0">Adicionar Item</button>
             <button class="adicionar_cart esgotado" @click="adicionarItem()" v-else disabled>Sem estoque</button>
           </div>
         </div>
       </section>
-      <div class="alerta">
-      <p class="alerta_mensagem"></p>
+      <div class="alerta" :class="{ativo: alertaAtivo}">
+      <p class="alerta_mensagem">{{mensagemAlerta}}</p>
       </div>
     </div>
 
