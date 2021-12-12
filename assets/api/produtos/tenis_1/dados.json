@@ -1,7 +1,7 @@
 {
-    "id":"tenis",
-    "nome":"Tenis",
-    "preco":"299",
+    "id":"tenis_1",
+    "nome":"Tênis StarX",
+    "preco":"399",
     "descricao":"Versátil e ultra confortável, treinos leves de corrida e uso diário.",
     "estoque":6,
     "img":"../images/image-product-1-thumbnail.jpg",

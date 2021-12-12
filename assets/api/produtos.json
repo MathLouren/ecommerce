@@ -1,27 +1,27 @@
 [
     {
-        "id":"tenis",
+        "id":"tenis_1",
         "nome":"Tênis StarX",
         "preco":"399",
         "img":"assets/images/image-product-1-thumbnail.jpg",
         "descricao":"Versátil e ultra confortável, treinos leves de corrida e uso diário."
     },
     {
-        "id":"tenis",
+        "id":"tenis_2",
         "nome":"Tênis Supreme",
         "preco":"199",
         "img":"assets/images/image-product-2.jpg",
         "descricao":"Versátil e ultra confortável, treinos leves de corrida e uso diário."
     },
     {
-        "id":"tenis",
+        "id":"tenis_3",
         "nome":"Tênis Galax",
         "preco":"599",
         "img":"assets/images/image-product-3.jpg",
         "descricao":"Versátil e ultra confortável, treinos leves de corrida e uso diário."
     },
     {
-        "id":"tenis",
+        "id":"tenis_4",
         "nome":"Tênis Universe",
         "preco":"799",
         "img":"assets/images/image-product-4.jpg",

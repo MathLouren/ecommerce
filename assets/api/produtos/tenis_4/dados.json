@@ -1,7 +1,7 @@
 {
-    "id":"tenis",
-    "nome":"Tenis",
-    "preco":"299",
+    "id":"tenis_4",
+    "nome":"Tênis Universe",
+    "preco":"799",
     "descricao":"Versátil e ultra confortável, treinos leves de corrida e uso diário.",
     "estoque":3,
     "img":"../images/image-product-4-thumbnail.jpg",

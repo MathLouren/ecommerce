@@ -1,7 +1,7 @@
 {
-    "id":"tenis",
-    "nome":"Tenis",
-    "preco":"299",
+    "id":"tenis_2",
+    "nome":"Tênis Supreme",
+    "preco":"199",
     "descricao":"Versátil e ultra confortável, treinos leves de corrida e uso diário.",
     "estoque":12,
     "img":"../images/image-product-2-thumbnail.jpg",

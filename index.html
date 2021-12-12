@@ -10,8 +10,11 @@
   </head>
   <body>
     <div id="app">
+      <section class="modal">
+        {{produto}}
+      </section>
       <section class="produtos">
-        <div v-for="produto in produtos" class="produto">
+        <div v-for="produto in produtos" @click="puxarProdutos(produto.id)" class="produto">
           <img
             :src="produto.img"
             :alt="produto.nome"
