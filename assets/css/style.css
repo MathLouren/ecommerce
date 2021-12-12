@@ -1,4 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #ffffff, #9c9c9c);
+  background: linear-gradient(to right, #ffffff, #9c9c9c);
+}
+
+#app {
+  padding: 0 50px;
+}
+
+/* LISTA PRODUTOS */
+
+.produtos {
+  max-width: 900px;
+  margin-left: 60px;
+}
+
+.produto {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  margin-top: 60px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.9);
+}
+
+.produto img {
+  cursor: pointer;
+  width: 200px;
+}
+
+.produto_info {
+  color: #272323;
+  display: flex;
+  flex-direction: column;
+}
+.detalhes_item {
+  display: flex;
+  flex-direction: column;
+}
+
+.produto_titulo {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+.btn_checkout {
+  margin-right: 40px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: 2px solid rgb(27, 27, 27);
+  color: #272323;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn_checkout:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.produto_preco {
+  margin: 10px 0;
+  font-size: 1.3rem;
 }
