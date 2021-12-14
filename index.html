@@ -80,6 +80,7 @@
 
       <section class="login_container" @click="cliqueForaLogin" :class="{ativo: loginAtivo}">
         <div class="login_modal">
+          <button @click="loginAtivo = false" class="carrinho_fechar">X</button>
             <h3>Login</h3>
             <div class="login_content">
               <input type="email" name="email" class="email" placeholder="e-mail">

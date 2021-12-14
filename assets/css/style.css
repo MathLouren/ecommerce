@@ -388,6 +388,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  animation: fadeInDown 0.6s forwards;
 }
 
 .login_modal h3 {
@@ -409,7 +411,12 @@ body {
   margin: 20px 0;
   outline: none;
   border: none;
-  border-bottom: 1px solid #646464;
+  border-bottom: 1.5px solid #646464;
+}
+
+.login_modal input:focus {
+  transition: 1s;
+  border-bottom: 1.5px solid #e7e7e7;
 }
 
 .login_modal .entrar {
@@ -424,17 +431,24 @@ body {
   letter-spacing: 0.1rem;
   font-weight: 700;
   border-radius: 5px;
-  background: #000000;
-  background: linear-gradient(to right, #c5c5c5, #646464);
+  background: linear-gradient(120deg, #c5c5c5, #646464, #000000);
+}
+.login_modal .entrar:hover {
+  transition: 1s;
+  color: #c5c5c5;
 }
 
 .login_register {
   text-align: center;
   color: #000;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .login_register p {
   cursor: pointer;
   margin-top: 10px;
+}
+
+.login_register p:hover {
+  color: #6b6b6b;
 }
