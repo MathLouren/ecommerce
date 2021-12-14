@@ -15,6 +15,9 @@
         <div class="carrinho_menu" @click="carrinhoAtivo = true">
           {{carrinhoTotal | numeroPreco}} | {{carrinho.length}}
         </div>
+        <div class="login" @click="loginAtivo = true">
+          <img src="assets/images/user.svg" alt="">
+        </div>
       </header>
 
       <section class="produtos">
@@ -73,6 +76,21 @@
 
     <div class="alerta" :class="{ativo: alertaAtivo}">
       <p class="alerta_mensagem">{{mensagemAlerta}}</p>
+      </div>
+    </div>
+
+    <div class="login_container" v-if="loginAtivo" @click="cliqueForaModalLogin">
+      <div class="login_modal">
+          <h3>Login</h3>
+          <div class="login_content">
+            <input type="email" name="email" class="email" placeholder="e-mail">
+            <input type="password" name="senha" class="senha" placeholder="senha">
+            <button class="entrar">Entrar</button>
+            <div class="login_register">
+              <p>Esqueceu a senha?</p>
+              <p>Novo? Registre-se aqui</p>
+            </div>
+          </div>
       </div>
     </div>
 
