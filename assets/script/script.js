@@ -7,7 +7,7 @@ const vm = new Vue({
         mensagemAlerta:"Item adicionado",
         alertaAtivo: false,
         carrinhoAtivo: false,
-        loginAtivo:false
+        loginAtivo: false,
     },
     filters:{
         numeroPreco(valor){
@@ -55,14 +55,14 @@ const vm = new Vue({
                 this.carrinhoAtivo = false;
             }
         },
+        cliqueForaLogin({target, currentTarget}){
+            if(target === currentTarget) {
+                this.loginAtivo = false;
+            }
+        },
         cliqueForaModal({target, currentTarget}){
             if(target === currentTarget) {
                 this.carrinhoAtivo = false;
-            }
-        },
-        cliqueForaModalLogin({target, currentTarget}){
-            if(target === currentTarget) {
-                this.loginAtivo = false;
             }
         },
         adicionarItem(){
@@ -109,12 +109,8 @@ const vm = new Vue({
         carrinho(){
             window.localStorage.carrinho = JSON.stringify(this.carrinho)
         },
-        loginAtivo(){
-            if(this.loginAtivo === true){
-                document.querySelector(".login_container").classList.add('ativo')
-            }else{
-                document.querySelector(".login_container").classList.remove('ativo')
-            }
+        cliqueForaLogin(){
+            
         }
     },
     created(){

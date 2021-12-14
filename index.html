@@ -16,7 +16,7 @@
           {{carrinhoTotal | numeroPreco}} | {{carrinho.length}}
         </div>
         <div class="login" @click="loginAtivo = true">
-          <img src="assets/images/user.svg" alt="">
+          <img src="assets/images/user.svg">
         </div>
       </header>
 
@@ -77,22 +77,23 @@
     <div class="alerta" :class="{ativo: alertaAtivo}">
       <p class="alerta_mensagem">{{mensagemAlerta}}</p>
       </div>
+
+      <section class="login_container" @click="cliqueForaLogin" :class="{ativo: loginAtivo}">
+        <div class="login_modal">
+            <h3>Login</h3>
+            <div class="login_content">
+              <input type="email" name="email" class="email" placeholder="e-mail">
+              <input type="password" name="senha" class="senha" placeholder="senha">
+              <button class="entrar">Entrar</button>
+              <div class="login_register">
+                <p>Esqueceu a senha?</p>
+                <p>Novo? Registre-se aqui</p>
+              </div>
+            </div>
+        </div>
+      </section>
     </div>
 
-    <div class="login_container" v-if="loginAtivo" @click="cliqueForaModalLogin">
-      <div class="login_modal">
-          <h3>Login</h3>
-          <div class="login_content">
-            <input type="email" name="email" class="email" placeholder="e-mail">
-            <input type="password" name="senha" class="senha" placeholder="senha">
-            <button class="entrar">Entrar</button>
-            <div class="login_register">
-              <p>Esqueceu a senha?</p>
-              <p>Novo? Registre-se aqui</p>
-            </div>
-          </div>
-      </div>
-    </div>
 
     <script src="/assets/script/script.js"></script>
   </body>

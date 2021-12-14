@@ -377,8 +377,7 @@ body {
   justify-content: center;
 }
 .login_container.ativo {
-  display: flex;
-  overflow-y: hidden;
+  display: flex !important;
 }
 
 .login_modal {
