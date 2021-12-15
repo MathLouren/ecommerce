@@ -10,6 +10,10 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: "Lato", sans-serif;
   color: #fff;
@@ -444,11 +448,14 @@ body {
   margin-top: 40px;
 }
 
-.login_register p {
+.login_register p,
+.login_register p a {
+  color: #000;
   cursor: pointer;
   margin-top: 10px;
 }
 
-.login_register p:hover {
+.login_register p:hover,
+.login_register p a:hover {
   color: #6b6b6b;
 }

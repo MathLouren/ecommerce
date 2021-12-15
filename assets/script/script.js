@@ -109,8 +109,8 @@ const vm = new Vue({
         carrinho(){
             window.localStorage.carrinho = JSON.stringify(this.carrinho)
         },
-        cliqueForaLogin(){
-            
+        loginAtivo(){
+            document.title = "Login Sneakers";
         }
     },
     created(){
