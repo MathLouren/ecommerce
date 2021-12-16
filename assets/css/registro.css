@@ -40,18 +40,17 @@ header img {
 
 .cadastro h2 {
   font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .cadastro_container {
   color: #000;
-  padding: 20px;
   display: grid;
   grid-template-columns: 100px 1fr;
   align-items: center;
 }
 
 .cadastro_container label {
-  margin: 5px 5px;
   display: block;
   font-family: "Noto", sans-serif;
   font-weight: bold;
@@ -65,7 +64,7 @@ header img {
   border: 2px solid transparent;
   padding: 15px 10px;
   margin: 15px 0;
-  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
   font-size: 1rem;
   border-radius: 5px;
   box-sizing: border-box;
@@ -83,6 +82,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .btn_cadastro {
+  margin-top: 20px;
   padding: 13px 40px;
   font-size: 1.2rem;
   cursor: pointer;

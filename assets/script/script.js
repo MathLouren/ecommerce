@@ -114,7 +114,7 @@ const vm = new Vue({
                     this.estado = r.uf;
                 })
             }
-        }
+        },
     },
     watch:{
         produto(){
