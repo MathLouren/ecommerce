@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
+    <script src="./assets/vue.js"></script>
     <link rel="stylesheet" href="assets/css/registro.css">
 </head>
 <body>
+    <div id="app">
     <header>
      <img src="assets/images/logo.svg" alt="logo" class="logo">
     </header>
@@ -21,19 +23,22 @@
             <label for="senha">Senha</label>
             <input type="password" name="senha">
             <label for="cep">Cep</label>
-            <input type="number" name="cep">
+            <input type="number" name="cep" v-model="cep" @keyup="preencherCep(cep)">
+            {{cepJson}}
             <label for="Rua">Rua</label>
-            <input type="text" name="Rua">
+            <input type="text" name="rua" v-model="rua" disabled>
             <label for="numero">Número</label>
             <input type="text" name="numero">
             <label for="bairro">Bairro</label>
-            <input type="text" name="bairro">
+            <input type="text" name="bairro" v-model="bairro" disabled>
             <label for="cidade">Cidade</label>
-            <input type="text" name="cidade">
+            <input type="text" name="cidade" v-model="cidade" disabled>
             <label for="estado">Estado</label>
-            <input type="text" name="estado">
+            <input type="text" name="estado" v-model="estado" disabled>
     </form>
     <button class="btn_cadastro">criar cadastro</button>
     </main>
+</div>
+<script src="/assets/script/script.js"></script>
 </body>
 </html>

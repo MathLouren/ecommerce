@@ -8,6 +8,12 @@ const vm = new Vue({
         alertaAtivo: false,
         carrinhoAtivo: false,
         loginAtivo: false,
+        cep:"",
+        cepJson:"",
+        rua:"",
+        bairro:"",
+        cidade:"",
+        estado:"",
     },
     filters:{
         numeroPreco(valor){
@@ -95,6 +101,19 @@ const vm = new Vue({
             if(hash){
                 this.puxarProdutos(hash.replace("#",""))
             }
+        },
+        preencherCep(cepValue){
+            const cep = cepValue.replace(/\D/g,"");
+            if(cep.length === 8){
+                fetch(`https://viacep.com.br/ws/${cep}/json/`).then((r)=>{
+                    return r.json()
+                }).then((r)=>{
+                    this.rua = r.logradouro;
+                    this.bairro = r.bairro;
+                    this.cidade = r.localidade;
+                    this.estado = r.uf;
+                })
+            }
         }
     },
     watch:{
@@ -111,7 +130,7 @@ const vm = new Vue({
         },
         loginAtivo(){
             document.title = "Login Sneakers";
-        }
+        },
     },
     created(){
         this.router();
